@@ -23,8 +23,6 @@ export default createStore({
       const tmp = state.from_language
       state.from_language = state.to_language
       state.to_language = tmp
-      console.log("from: " + state.from_language);
-      console.log("to: " + state.to_language);
     },
     toggleMute(state) {
       state.is_muted = !state.is_muted
@@ -34,6 +32,10 @@ export default createStore({
     init(context) {
       context.commit('init')
     }
+  },
+  getters: {
+    getIsMuted: state => state.is_muted,
+    getToLanguage: state => state.to_language,
   },
   modules: {},
 });

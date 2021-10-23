@@ -21,5 +21,5 @@ class ConnectDb(object):
  
         print(self.__class__.__name__ + ".__exit__():End")
  
-    def execute(self, sql) :
+    def execute(self, sql):
         return self.db.execute(sql)
